@@ -1,22 +1,23 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "target": "ES2022",                              // Use ES2022 features
+    "lib": ["ES2023"],                                // Include ES2023 library files for modern features
+    "module": "ESNext",                               // Use ES module system
+    "skipLibCheck": true,                             // Skip type checking of declaration files
+    "moduleResolution": "bundler",                    // Resolve modules like bundlers (e.g., Vite)
+    "allowImportingTsExtensions": false,               // Allow importing TypeScript files with extensions
+    "isolatedModules": true,                          // Ensure single file transformations
+    "moduleDetection": "force",                       // Force module detection
+    "noEmit": false,                                   // Prevent TypeScript from emitting JavaScript files
+    "strict": true,                                   // Enable strict type checking
+    "noUnusedLocals": true,                           // Disallow unused local variables
+    "noUnusedParameters": true,                       // Disallow unused function parameters
+    "noFallthroughCasesInSwitch": true,               // Disallow fallthrough in switch cases
+    "esModuleInterop": true,                          // Enable interop with CommonJS modules
+    "composite": true                                 // Enable composite projects (for multi-project setup)
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "server/**/*",                                   // Include all server files (node-related files)
+    "vite.config.ts"                                  // Include Vite configuration file
+  ]
 }

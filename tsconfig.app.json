@@ -1,24 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "target": "ES2020",                              // Use the latest JavaScript features
+    "useDefineForClassFields": true,                  // Ensure class fields are defined correctly
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],         // Include support for modern JavaScript and DOM
+    "module": "ESNext",                               // Use ES module system
+    "skipLibCheck": true,                             // Skip type checking of declaration files
+    "moduleResolution": "bundler",                    // Resolve modules like bundlers (e.g., Vite)
+    "allowImportingTsExtensions": false,               // Allow importing TypeScript files with extensions
+    "isolatedModules": true,                          // Ensure single file transformations
+    "moduleDetection": "force",                       // Force module detection
+    "noEmit": false,                                   // Prevent TypeScript from emitting JavaScript files
+    "jsx": "react-jsx",                               // Enable JSX with React 17+ automatic JSX transform
+    "strict": true,                                   // Enable strict type checking
+    "noUnusedLocals": true,                           // Disallow unused local variables
+    "noUnusedParameters": true,                       // Disallow unused function parameters
+    "noFallthroughCasesInSwitch": true,    
+    "composite": true            
   },
   "include": ["src"]
 }
