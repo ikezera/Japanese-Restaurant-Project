@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+.japanese-pattern {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f3f4f6' fill-opacity='0.6' fill-rule='evenodd'%3E%3Cpath d='M0 20L20 0v20H0zm40-20v20H20L40 0zm0 40L20 20h20v20zM0 20h20l-20 20z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.menu-link {
+  @apply relative px-3 py-2 text-gray-700 hover:text-[rgb(119,218,206)] transition-colors duration-200;
+  white-space: nowrap;
+}
+
+.menu-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-[rgb(119,218,206)] transition-all duration-200;
+}
+
+.menu-link:hover::after {
+  @apply w-full;
+}
+
+.japanese-heading {
+  @apply relative inline-block;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.japanese-heading::before {
+  content: '•';
+  @apply absolute -left-4 text-[rgb(119,218,206)];
+}
+
+.japanese-heading::after {
+  content: '•';
+  @apply absolute -right-4 text-[rgb(119,218,206)];
+}
